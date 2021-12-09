@@ -1,6 +1,10 @@
 import Cookies from "js-cookie"
 import fetch from 'isomorphic-unfetch';
 
+// Ce helper te permettra de récupérer des données de l'API
+// tu peut l'utiliser notamment dans un getInitialProps 
+// qui te permet de générer statiquement la récupération de données depuis l'API
+
 const FetchAPIData = (url, locale) => {
     const token = Cookies.get('token');
 

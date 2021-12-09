@@ -1,6 +1,9 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
+// attention quand tu manipule ce fichier c'est ton point d'entrée vers le _app.js qui est
+// le point culminant de ton application NextJS
+
 export default class MyDocument extends Document {
     static async getInitialProps(ctx) {
         const sheet = new ServerStyleSheet();
