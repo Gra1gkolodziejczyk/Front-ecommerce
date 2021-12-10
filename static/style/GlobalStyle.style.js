@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { themeGet } from '@styled-system/theme-get';
 
 //-------------------------------------------------------------
 //----------------Point d'entrée GlobalStyles------------------

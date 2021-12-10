@@ -2,9 +2,9 @@ import React from 'react'
 
 const Register = () => {
     return (
-        <div>
-            
-        </div>
+        <>
+            <h1>Ceci est la page register</h1>
+        </>
     )
 }
 
