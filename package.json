@@ -14,6 +14,7 @@
     "antd": "^4.17.3",
     "antd-mobile": "^0.0.0",
     "cors": "^2.8.5",
+    "country-flag-icons": "^1.4.19",
     "formik": "^2.2.9",
     "i18n-iso-countries": "^7.1.0",
     "isomorphic-unfetch": "^3.1.0",

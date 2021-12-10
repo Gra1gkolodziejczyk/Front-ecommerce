@@ -1,7 +1,10 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { Menu, Select } from 'antd';
+import Flags from 'country-flag-icons/react/3x2';
+import ActiveLink from '../../../helpers/activeLink';
 import useTranslation from '../../../hooks/useTranslation';
+import { LanguageSelectWrapper } from './MainMenu.style';
 
 const MainMenu = ({ className, isLoggedIn }) => {
 
@@ -26,8 +29,38 @@ const MainMenu = ({ className, isLoggedIn }) => {
 
     return (
         <Menu className={className}>
+            <Menu.Item key="0">
+                <LanguageSelectWrapper>
+                    <Select className='language_select' defaultValue={locale} onChange={handleChangeLocale} style={{ width: 150 }}>
+                        <Option key={'fr'}><Flags.FR style={{ width: "20px", marginRight: "10px" }} />Français</Option>
+                        <Option key={'en'}><Flags.GB style={{ width: "20px", marginRight: "10px" }} />English</Option>
+                    </Select>
+                </LanguageSelectWrapper>
+            </Menu.Item>
+            <Menu.Item key="1">
+                <ActiveLink>
+                    A propos
+                </ActiveLink>
+            </Menu.Item>
+            <Menu.Item key="2">
+                <ActiveLink>
+                    Entreprise
+                </ActiveLink>
+            </Menu.Item>
             <Menu.Item>
-                
+                <ActiveLink>
+                    {/* Tu met les titres que tu veux */}
+                </ActiveLink>
+            </Menu.Item>
+            <Menu.Item>
+                <ActiveLink>
+
+                </ActiveLink>
+            </Menu.Item>
+            <Menu.Item>
+                <ActiveLink>
+
+                </ActiveLink>
             </Menu.Item>
         </Menu>
     )
