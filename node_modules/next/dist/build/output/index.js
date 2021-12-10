@@ -99,10 +99,7 @@ let serverWasLoading = true;
 let serverWebWasLoading = false;
 buildStore.subscribe((state)=>{
     const { amp , client , server , serverWeb , trigger  } = state;
-    const { bootstrap: bootstrapping , appUrl  } = _store.store.getState();
-    if (bootstrapping && (client.loading || server.loading)) {
-        return;
-    }
+    const { appUrl  } = _store.store.getState();
     if (client.loading || server.loading || (serverWeb === null || serverWeb === void 0 ? void 0 : serverWeb.loading)) {
         _store.store.setState({
             bootstrap: false,
@@ -123,7 +120,7 @@ buildStore.subscribe((state)=>{
         appUrl: appUrl,
         loading: false,
         typeChecking: false,
-        partial: clientWasLoading && !serverWasLoading && !serverWebWasLoading ? 'client' : serverWasLoading && !clientWasLoading && !serverWebWasLoading ? 'server' : serverWebWasLoading && !clientWasLoading && !serverWasLoading ? 'serverWeb' : undefined,
+        partial: clientWasLoading && (serverWasLoading || serverWebWasLoading) ? 'client and server' : undefined,
         modules: (clientWasLoading ? client.modules : 0) + (serverWasLoading ? server.modules : 0) + (serverWebWasLoading ? (serverWeb === null || serverWeb === void 0 ? void 0 : serverWeb.modules) || 0 : 0),
         hasServerWeb: !!serverWeb
     };
@@ -153,9 +150,8 @@ buildStore.subscribe((state)=>{
         const warnings = [
             ...client.warnings || [],
             ...server.warnings || [],
-            ...serverWeb && serverWeb.warnings || [],
-            ...Object.keys(amp).length > 0 && formatAmpMessages(amp) || [], 
-        ];
+            ...serverWeb && serverWeb.warnings || [], 
+        ].concat(formatAmpMessages(amp) || []);
         _store.store.setState({
             ...partialState,
             errors: null,

@@ -37,6 +37,7 @@ function _interopRequireDefault(obj) {
     };
 }
 const data = JSON.parse(document.getElementById('__NEXT_DATA__').textContent);
+window.__NEXT_DATA__ = data;
 let { assetPrefix , page  } = data;
 assetPrefix = assetPrefix || '';
 let mostRecentHash = null;
@@ -106,6 +107,6 @@ function tryApplyUpdates() {
     path: '/_next/webpack-hmr'
 });
 (0, _fouc).displayContent();
-(0, _onDemandEntriesClient).default();
+(0, _onDemandEntriesClient).default(data.page);
 
 //# sourceMappingURL=amp-dev.js.map

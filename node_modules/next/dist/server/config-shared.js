@@ -90,6 +90,7 @@ const defaultConfig = {
         reactRoot: Number(process.env.NEXT_PRIVATE_REACT_ROOT) > 0,
         disableOptimizedLoading: false,
         gzipSize: true,
+        swcFileReading: true,
         craCompat: false,
         esmExternals: true,
         // default to 50MB limit
@@ -99,9 +100,6 @@ const defaultConfig = {
         fullySpecified: false,
         outputFileTracingRoot: process.env.NEXT_PRIVATE_OUTPUT_TRACE_ROOT || '',
         outputStandalone: !!process.env.NEXT_PRIVATE_STANDALONE
-    },
-    future: {
-        strictPostcssConfiguration: false
     }
 };
 exports.defaultConfig = defaultConfig;

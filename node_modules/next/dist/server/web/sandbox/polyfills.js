@@ -10,7 +10,6 @@ Object.defineProperty(exports, "CryptoKey", {
         return _webcrypto.CryptoKey;
     }
 });
-exports.TextEncoder = exports.TextDecoder = void 0;
 var _webcrypto = require("next/dist/compiled/@peculiar/webcrypto");
 var _webStreamsPolyfill = require("next/dist/compiled/web-streams-polyfill");
 var _uuid = require("next/dist/compiled/uuid");
@@ -26,36 +25,6 @@ function atob(b64Encoded) {
 function btoa(str) {
     return Buffer.from(str, 'binary').toString('base64');
 }
-class TextEncoderRuntime {
-    constructor(){
-        this.encoder = new TextEncoder();
-    }
-    get encoding() {
-        return this.encoder.encoding;
-    }
-    encode(input) {
-        return this.encoder.encode(input);
-    }
-}
-class TextDecoderRuntime {
-    constructor(){
-        this.decoder = new TextDecoder();
-    }
-    get encoding() {
-        return this.decoder.encoding;
-    }
-    get fatal() {
-        return this.decoder.fatal;
-    }
-    get ignoreBOM() {
-        return this.decoder.ignoreBOM;
-    }
-    decode(input, options) {
-        return this.decoder.decode(input, options);
-    }
-}
-exports.TextDecoder = TextDecoderRuntime;
-exports.TextEncoder = TextEncoderRuntime;
 class Crypto extends _webcrypto.Crypto {
     constructor(...args){
         super(...args);

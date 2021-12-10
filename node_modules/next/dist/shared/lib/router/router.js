@@ -670,32 +670,38 @@ class Router {
             return false;
         }
         resolvedAs = delLocale(delBasePath(resolvedAs), this.locale);
-        const effect = await this._preflightRequest({
-            as,
-            cache: process.env.NODE_ENV === 'production',
-            pages,
-            pathname,
-            query
-        });
-        if (effect.type === 'rewrite') {
-            query = {
-                ...query,
-                ...effect.parsedAs.query
-            };
-            resolvedAs = effect.asPath;
-            pathname = effect.resolvedHref;
-            parsed.pathname = effect.resolvedHref;
-            url = (0, _utils).formatWithValidation(parsed);
-        } else if (effect.type === 'redirect' && effect.newAs) {
-            return this.change(method, effect.newUrl, effect.newAs, options);
-        } else if (effect.type === 'redirect' && effect.destination) {
-            window.location.href = effect.destination;
-            return new Promise(()=>{
+        /**
+     * If the route update was triggered for client-side hydration then
+     * do not check the preflight request. Otherwise when rendering
+     * a page with refresh it might get into an infinite loop.
+     */ if (options._h !== 1) {
+            const effect = await this._preflightRequest({
+                as,
+                cache: process.env.NODE_ENV === 'production',
+                pages,
+                pathname,
+                query
             });
-        } else if (effect.type === 'refresh') {
-            window.location.href = as;
-            return new Promise(()=>{
-            });
+            if (effect.type === 'rewrite') {
+                query = {
+                    ...query,
+                    ...effect.parsedAs.query
+                };
+                resolvedAs = effect.asPath;
+                pathname = effect.resolvedHref;
+                parsed.pathname = effect.resolvedHref;
+                url = (0, _utils).formatWithValidation(parsed);
+            } else if (effect.type === 'redirect' && effect.newAs) {
+                return this.change(method, effect.newUrl, effect.newAs, options);
+            } else if (effect.type === 'redirect' && effect.destination) {
+                window.location.href = effect.destination;
+                return new Promise(()=>{
+                });
+            } else if (effect.type === 'refresh') {
+                window.location.href = as;
+                return new Promise(()=>{
+                });
+            }
         }
         const route = (0, _normalizeTrailingSlash).removePathTrailingSlash(pathname);
         if ((0, _isDynamic).isDynamicRoute(route)) {

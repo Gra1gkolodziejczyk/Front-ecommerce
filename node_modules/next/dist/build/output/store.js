@@ -69,16 +69,19 @@ store.subscribe((state)=>{
         if (state.appUrl) {
             Log.ready(`started server on ${state.bindAddr}, url: ${state.appUrl}`);
         }
-        if (startTime === 0) startTime = Date.now();
         return;
     }
     if (state.loading) {
         if (state.trigger) {
-            Log.wait(`compiling ${state.trigger}...`);
+            if (state.trigger !== 'initial') {
+                Log.wait(`compiling ${state.trigger}...`);
+            }
         } else {
             Log.wait('compiling...');
         }
-        if (startTime === 0) startTime = Date.now();
+        if (startTime === 0) {
+            startTime = Date.now();
+        }
         return;
     }
     if (state.errors) {

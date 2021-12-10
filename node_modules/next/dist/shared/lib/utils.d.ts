@@ -182,6 +182,11 @@ export declare type HtmlProps = {
     head?: Array<JSX.Element | null>;
     useMaybeDeferContent: MaybeDeferContentHook;
     useMainContent: (fn?: (content: JSX.Element) => JSX.Element) => JSX.Element;
+    crossOrigin?: string;
+    optimizeCss?: boolean;
+    optimizeFonts?: boolean;
+    optimizeImages?: boolean;
+    concurrentFeatures?: boolean;
 };
 /**
  * Next `API` route request

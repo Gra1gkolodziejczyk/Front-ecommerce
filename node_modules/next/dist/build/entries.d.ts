@@ -8,7 +8,11 @@ declare type ObjectValue<T> = T extends {
 export declare type PagesMapping = {
     [page: string]: string;
 };
-export declare function createPagesMapping(pagePaths: string[], extensions: string[], isDev: boolean, hasServerComponents: boolean): PagesMapping;
+export declare function createPagesMapping(pagePaths: string[], extensions: string[], { isDev, hasServerComponents, hasConcurrentFeatures, }: {
+    isDev: boolean;
+    hasServerComponents: boolean;
+    hasConcurrentFeatures: boolean;
+}): PagesMapping;
 declare type Entrypoints = {
     client: webpack5.EntryObject;
     server: webpack5.EntryObject;

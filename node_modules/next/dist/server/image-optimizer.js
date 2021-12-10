@@ -331,8 +331,10 @@ async function imageOptimizer(server, req, res, parsedUrl, nextConfig, distDir, 
                 }
                 if (contentType === AVIF) {
                     if (transformer.avif) {
+                        const avifQuality = quality - 15;
                         transformer.avif({
-                            quality
+                            quality: Math.max(avifQuality, 0),
+                            chromaSubsampling: '4:2:0'
                         });
                     } else {
                         console.warn(_chalk.default.yellow.bold('Warning: ') + `Your installed version of the 'sharp' package does not support AVIF images. Run 'yarn add sharp@latest' to upgrade to the latest version.\n` + 'Read more: https://nextjs.org/docs/messages/sharp-version-avif');
