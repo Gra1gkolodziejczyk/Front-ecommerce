@@ -27,7 +27,7 @@ export default class MyApp extends App {
 
     let isProtectedRoute = [
       `/dashboard`,
-    ];
+    ].includes(pathname);
 
     if (!isLoggedIn && isProtectedRoute && ctx.res) {
       ctx.res.writeHead(302, {Location: `${process.env.LOCAL_FRONT_SERVER}/${locale}/login?next=${asPath}`});

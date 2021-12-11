@@ -9,7 +9,7 @@ const AuthMenu = ({ className }) => {
     const { locale } = router;
 
     return (
-        <Menu>
+        <Menu className={className}>
             <Menu.Item key="0">
                 <ActiveLink href="/login">
                     Login
@@ -23,3 +23,5 @@ const AuthMenu = ({ className }) => {
         </Menu>
     )
 }
+
+export default AuthMenu;

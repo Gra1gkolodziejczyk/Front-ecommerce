@@ -4,6 +4,7 @@
 
 import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
+import { DARK_GREY, GREY, RED, DARK_BLUE, LIGHTGREY, LIGHT_BLUE, BLUE} from '../../../settings/colors';
 
 const HeaderWrapper = styled.header`
   width: 100%;
@@ -55,7 +56,7 @@ export const MobileNavbar = styled.nav`
       height: 5px;
       margin: 5px 0;
       border-radius: 5px;
-      background-color: blue;
+      background-color: ${DARK_BLUE};
       transition: all 0.3s ease;
     }
 
@@ -80,7 +81,7 @@ export const MobileNavbar = styled.nav`
 
     .hamburg-btn {
       > span {
-        background-color: red;
+        background-color: ${RED};
       }
     }
   }
@@ -163,7 +164,7 @@ export const AvatarImage = styled.div`
 export const AvatarInfo = styled.div`
 padding: 10px;
   h3 {
-    color: grey;
+    color: ${GREY};
     font-size: 1em;
     line-height: 1em;
     font-weight: 400;
@@ -171,7 +172,7 @@ padding: 10px;
   }
 
   a {
-    color: blue;
+    color: ${DARK_BLUE};
     font-size: 1em;
     line-height: 1em;
     font-weight: 700;
@@ -181,7 +182,7 @@ padding: 10px;
     &:focus {
       text-decoration: none;
       outline: 0;
-      color: red;
+      color: ${RED};
     }
   }
 `;

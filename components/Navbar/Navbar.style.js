@@ -1,8 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
+import { RED, DARK_BLUE, GREY, BLUE, DARK_GREY } from '../../settings/colors';
 
 const NavbarWrapper = styled.nav`
-  display: flex;
+   display: flex;
   width: 100%;
   min-height: 82px;
   align-items: center;
@@ -36,12 +37,13 @@ const NavbarWrapper = styled.nav`
       li {
         display: flex;
         background-color: transparent;
-        .amfr {
+        amfr {
           background-color: transparent;
         }
         a {
           color: white;
           font-weight: 700;
+          /* text-shadow: 1px 1px 1px ${GREY}; */
 
           &.register {
             color:white;
@@ -88,7 +90,7 @@ export const AvatarWrapper = styled.div`
       overflow: hidden;
       border-radius: 50%;
       cursor: pointer;
-      border: 3px solid red;
+      border: 3px solid ${RED};
       
 
       /* box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px; */
@@ -134,18 +136,18 @@ export const AvatarWrapper = styled.div`
 
 
         a {
-          color: grey;
+          color: ${GREY};
           transition: color 0.2s ease-in-out;
           &:hover {
-            color: red;
+            color: ${RED};
           }
           &.active {
             font-weight: 700;
-            color: red;
+            color: ${RED};
           }
         svg {
           display: flex;
-          color: red;
+          color: ${GREY};
           font-size: 20px;
           margin-right: 10px;
           display: flex;
@@ -167,7 +169,7 @@ export const AvatarWrapper = styled.div`
           text-align: left;
           background-color: transparent;
           transition: color 0.2s ease-in-out;
-          color: red;
+          color: ${RED};
           font-weight: 700;
 
           svg {
@@ -176,7 +178,7 @@ export const AvatarWrapper = styled.div`
           }
 
           &:hover {
-            color: red;
+            color: ${RED};
           }
           &:focus {
             outline: none;
@@ -205,7 +207,7 @@ export const MenuWrapper = styled.div`
       padding: 0;
       height: auto;
       margin-bottom: 0 !important;
-      color: grey;
+      color: ${GREY};
       font-size: 1em;
       line-height: 18px;
       font-weight: 500;
@@ -226,17 +228,17 @@ export const MenuWrapper = styled.div`
 
       a {
         padding: 30px 16px;
-        color: grey;
+        color: ${DARK_GREY};
         transition: color 0.2s ease-in-out;
         @media only screen and (max-width: 1200px) {
           padding: 30px 10px;
         }
         &:hover {
-          color: red;
+          color: ${RED};
         }
         &.active {
           font-weight: 700;
-          color: white;
+          color:white;
           border-bottom: 3px solid ${themeGet('primary.0', '#01073a')};
         }
       }
@@ -260,7 +262,7 @@ export const AuthWrapper = styled.div`
       padding: 0;
       height: auto;
       margin-bottom: 0 !important;
-      color: grey;
+      color: ${GREY};
       font-size: 14px;
       line-height: 16px;
       font-weight: 700;
@@ -280,14 +282,14 @@ export const AuthWrapper = styled.div`
         color: ${themeGet('text.0', '#2C2C2C')};
         transition: color 0.2s ease-in-out;
         &:hover {
-          color: red;
+          color: ${RED};
         }
       }
 
       &:last-child {
         a {
           color: ${themeGet('color.1', '#ffffff')};
-          background-color: red;
+          background-color: ${RED};
           transition: opacity 0.2s ease;
 
           &:hover {

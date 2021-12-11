@@ -1,0 +1,17 @@
+export const WHITE = "ffffff";
+export const RED = "#F9185B";
+export const ORANGE = "#ff4b36";
+export const LIGHT_RED = "#FF5386";
+export const BLUE = "#172cc9";
+export const DARK_BLUE = "#08104d;";
+export const LIGHT_BLUE = "#f2f6ff";
+export const GREY = "#666a80";
+export const DARK_GREY = "#33393f";
+export const MIDGREY = "#bfbfbf";
+export const LIGHTGREY = "#f2f2f224";
+export const GREEN = "#57cd62";
+export const YELLOW = "#ffc53d";
+export const GREEN_SMILES = '#73D13D';
+export const LIGHTGREEN = '#e8f4dc';
+export const PINK = 'fff3f9';
+export const LOADER_WHITE = '#FFFFFF';

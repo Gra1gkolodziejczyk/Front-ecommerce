@@ -26,7 +26,7 @@ export const Navbar = ({
 }) => {
 
     const addAllClasses = ['navbar'];
-    const router = useRouter();
+    // const router = useRouter();
 
     if (className) {
         addAllClasses.push(className);
@@ -45,8 +45,7 @@ export const Navbar = ({
                 </LogoArea>
             ) : null}
             <MenuArea>
-                {router.pathname === "/dashboard" ||
-                router.pathname === ""
+                {location.pathname === "/dashboard"
                 ? null :
                     navMenu && <MenuWrapper className='main_menu'>{navMenu}</MenuWrapper>
                 }

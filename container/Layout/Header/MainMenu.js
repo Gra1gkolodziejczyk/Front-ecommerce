@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router';
+import { useRouter, withRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { Menu, Select } from 'antd';
 import Flags from 'country-flag-icons/react/3x2';
@@ -38,32 +38,33 @@ const MainMenu = ({ className, isLoggedIn }) => {
                 </LanguageSelectWrapper>
             </Menu.Item>
             <Menu.Item key="1">
-                <ActiveLink>
+                <ActiveLink href="/">
                     A propos
                 </ActiveLink>
             </Menu.Item>
             <Menu.Item key="2">
-                <ActiveLink>
+                <ActiveLink href="/">
                     Entreprise
                 </ActiveLink>
             </Menu.Item>
-            <Menu.Item>
-                <ActiveLink>
+            <Menu.Item key="3">
+                <ActiveLink href="/">
+                    Un lien
                     {/* Tu met les titres que tu veux */}
                 </ActiveLink>
             </Menu.Item>
-            <Menu.Item>
-                <ActiveLink>
-
+            <Menu.Item key="4">
+                <ActiveLink href="/">
+                    Un lien
                 </ActiveLink>
             </Menu.Item>
-            <Menu.Item>
-                <ActiveLink>
-
+            <Menu.Item key="5">
+                <ActiveLink href="/">
+                    Un lien
                 </ActiveLink>
             </Menu.Item>
         </Menu>
     )
 }
 
-export default MainMenu
+export default withRouter(MainMenu)

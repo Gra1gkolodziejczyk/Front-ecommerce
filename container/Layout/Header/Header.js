@@ -28,7 +28,7 @@ const Header = ({ user, isLoggedIn }) => {
 
     const { Option } = Select;
 
-    const headerType = router.pathname === "/" ? "transparent" : "default";
+    const headerType = router.pathname === "/" ? "default" : "default";
     const auth = typeof user === 'string' ? JSON.parse(user) : user;
     const { t } = useTranslation();
 

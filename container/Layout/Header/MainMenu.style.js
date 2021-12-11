@@ -9,6 +9,7 @@ export const LanguageSelectWrapper = styled.div`
             color: blue;
             border: 1px solid white;
             font-weight: 700;
+            z-index: 1;
 
             .ant-select-dropdown {
                 border-radius: 8px;

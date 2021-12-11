@@ -23,13 +23,13 @@
       "static/chunks/container_Layout_Header_ProfileMenu_js.js"
     ]
   },
-  "../container/Layout/Layout.js -> ../Layout/Footer/Footer": {
+  "../container/Layout/Layout.js -> ./Footer/Footer": {
     "id": "./container/Layout/Footer/Footer.js",
     "files": [
       "static/chunks/container_Layout_Footer_Footer_js.js"
     ]
   },
-  "../container/Layout/Layout.js -> ../Layout/Header/Header": {
+  "../container/Layout/Layout.js -> ./Header/Header": {
     "id": "./container/Layout/Header/Header.js",
     "files": [
       "static/chunks/container_Layout_Header_Header_js.js"
