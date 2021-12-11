@@ -1,27 +1,46 @@
+import { Layout } from "antd"
 import dynamic from 'next/dynamic';
-import React from 'react';
-import { Layout } from 'antd';
-import { useRouter } from 'next/router';
-import LayoutProvider from '../../context/LayoutProvider';
+import { useRouter } from "next/router";
+import LayoutProvider from "../../context/LayoutProvider";
 
-const Header = dynamic(() => import('../Layout/Header/Header'));
-const Footer = dynamic(() => import('../Layout/Footer/Footer'));
+const Footer = dynamic(() => import('./Footer/Footer'));
+const Header = dynamic(() => import('./Header/Header'));
 
 const { Content } = Layout;
 
-const LayoutPage = ({ children, user, isLoggedIn }) => {
+const LayoutWrapper = ({ children, user, isLoggedIn }) => {
+    if (typeof user === 'string') user = JSON.parse(user);
 
     const router = useRouter();
-    const { locale } = router;
-    if (typeof user === 'string') user = JSON.parse(user);
 
     return (
         <Layout>
             <LayoutProvider>
-                
+                {router.pathname === '/' ||
+                router.pathname === '/configurator' ||
+                router.pathname === '/products' ||
+                router.pathname === '/products/[id]' ||
+                router.pathname === '/dashboard' ||
+                router.pathname === '/login' ||
+                router.pathname === '/registration' ? (
+                    <>
+                        <Header user={user} isLoggedIn={isLoggedIn} />
+                        <Content>{children}</Content>
+                        {router.pathname === '/' ||
+                        router.pathname === '/dashboard' 
+                        
+                    ? (<Footer />)
+                    : null}
+                    </>
+                ) : (
+                    <>
+                        <Content>{children}</Content>
+                        {router.pathname.split("/")[1] == "dashboard" ? <Footer /> : null}
+                    </>
+                )}
             </LayoutProvider>
         </Layout>
     )
 }
 
-export default LayoutPage
+export default LayoutWrapper

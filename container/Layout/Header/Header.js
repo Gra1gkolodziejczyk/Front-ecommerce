@@ -53,7 +53,7 @@ const Header = ({ user, isLoggedIn }) => {
                     authMenu={<AuthMenu />}
                     isLogin={isLoggedIn}
                     avatar={
-                        // <Image /> tu mettras ici l'image avatar du user
+                        <Image />
                     }
                     profileMenu={
                         <ProfileMenu 

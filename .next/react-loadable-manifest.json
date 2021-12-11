@@ -1,1 +1,38 @@
-{}
+{
+  "../container/Layout/Header/Header.js -> ./AuthMenu": {
+    "id": "./container/Layout/Header/AuthMenu.js",
+    "files": [
+      "static/chunks/container_Layout_Header_AuthMenu_js.js"
+    ]
+  },
+  "../container/Layout/Header/Header.js -> ./MainMenu": {
+    "id": "./container/Layout/Header/MainMenu.js",
+    "files": [
+      "static/chunks/container_Layout_Header_MainMenu_js.js"
+    ]
+  },
+  "../container/Layout/Header/Header.js -> ./MobileMenu": {
+    "id": "./container/Layout/Header/MobileMenu.js",
+    "files": [
+      "static/chunks/container_Layout_Header_MobileMenu_js.js"
+    ]
+  },
+  "../container/Layout/Header/Header.js -> ./ProfileMenu": {
+    "id": "./container/Layout/Header/ProfileMenu.js",
+    "files": [
+      "static/chunks/container_Layout_Header_ProfileMenu_js.js"
+    ]
+  },
+  "../container/Layout/Layout.js -> ../Layout/Footer/Footer": {
+    "id": "./container/Layout/Footer/Footer.js",
+    "files": [
+      "static/chunks/container_Layout_Footer_Footer_js.js"
+    ]
+  },
+  "../container/Layout/Layout.js -> ../Layout/Header/Header": {
+    "id": "./container/Layout/Header/Header.js",
+    "files": [
+      "static/chunks/container_Layout_Header_Header_js.js"
+    ]
+  }
+}
