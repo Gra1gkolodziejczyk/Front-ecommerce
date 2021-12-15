@@ -1,3 +1,11 @@
+const withPlugins = require('next-compose-plugins');
+const withImages = require('next-images');
+const withCSS = require('@zeit/next-css');
+const withFonts = require('next-fonts');
+require('dotenv').config();
+
+const FilterWarningsPlugin = require('webpack-filter-warnings-plugin');
+
 const nextConfig = {
   env: {
     LOCAL_DATA_LARAVEL: process.env.LOCAL_DATA_LARAVEL,
@@ -42,5 +50,29 @@ const nextConfig = {
 
 
 module.exports = {
-  reactStrictMode: true,
+  trailingSlash: true
 }
+
+module.exports = withPlugins(
+  [
+    [withCSS],
+    [withFonts],
+    [withImages],
+    [
+      {
+        i18n: {
+          locales: ["en", "fr"],
+          defaultLocale: "fr",
+        },
+        poweredByHeader: false,
+        cssModules: true,
+        cssLoaderOptions: {
+          url: false,
+          importLoaders: 1,
+          localIdentName: "[path]___[local]___[hash:base64:5]",
+        },
+      },
+    ],
+  ],
+  nextConfig,
+);
