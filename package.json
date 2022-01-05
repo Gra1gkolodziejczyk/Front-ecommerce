@@ -11,10 +11,12 @@
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@styled-system/theme-get": "^5.1.2",
+    "@zeit/next-css": "^1.0.1",
     "antd": "^4.17.3",
     "antd-mobile": "^0.0.0",
     "cors": "^2.8.5",
     "country-flag-icons": "^1.4.19",
+    "dotenv": "^10.0.0",
     "formik": "^2.2.9",
     "i18n-iso-countries": "^7.1.0",
     "isomorphic-unfetch": "^3.1.0",
@@ -22,8 +24,10 @@
     "mobile-detect": "^1.4.5",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.34",
+    "next-compose-plugins": "^2.2.1",
     "next-cookies": "^2.0.3",
     "next-fonts": "^1.5.1",
+    "next-images": "^1.8.4",
     "next-seo": "^4.28.1",
     "numeral": "^2.0.6",
     "postcss": "^8.4.4",
@@ -35,6 +39,7 @@
     "redux": "^4.1.2",
     "styled-components": "^5.3.3",
     "webpack": "^5.64.4",
+    "webpack-filter-warnings-plugin": "^1.2.1",
     "yup": "^0.32.11"
   },
   "devDependencies": {
