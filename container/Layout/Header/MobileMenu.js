@@ -18,8 +18,7 @@ const MobileMenu = ({ className, espace, switchEspace, user, onClose, hostMode =
             {loggedIn ? (
                 <Collapse> {/* Cette balise permet de renfermer 
                             le dropdown du menu je te laisse admirer sur le rendu dans ton navigateur */}
-                    <Panel header="Dashboard"> {/* cette balise renferme de Menu Item 
-                                                comme tu le souhaitais pour la navbar */}
+                    <Panel header="Dashboard"> {/* cette balise renferme de Menu Item comme tu le souhaitais pour la navbar */}
                         <Menu.Item onClick={onClose}>
                             <ActiveLink>
                                 Mes locations

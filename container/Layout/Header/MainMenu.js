@@ -44,7 +44,7 @@ const MainMenu = ({ className, isLoggedIn }) => {
             </Menu.Item>
             <Menu.Item key="2">
                 <ActiveLink href="/">
-                    Entreprise
+                    Store
                 </ActiveLink>
             </Menu.Item>
             <Menu.Item key="3">
@@ -60,7 +60,7 @@ const MainMenu = ({ className, isLoggedIn }) => {
             </Menu.Item>
             <Menu.Item key="5">
                 <ActiveLink href="/">
-                    Un lien
+                    Contact
                 </ActiveLink>
             </Menu.Item>
         </Menu>

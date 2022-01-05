@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { withData } from '../helpers/restriction'
+import { withData } from '../helpers/restriction';
 import { Navbar } from '../components/Navbar/Navbar';
 import GetAPIData from '../helpers/get_api_data';
 

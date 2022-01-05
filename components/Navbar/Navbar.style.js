@@ -3,12 +3,12 @@ import { themeGet } from '@styled-system/theme-get';
 import { RED, DARK_BLUE, GREY, BLUE, DARK_GREY } from '../../settings/colors';
 
 const NavbarWrapper = styled.nav`
-   display: flex;
+  display: flex;
   width: 100%;
   min-height: 82px;
   align-items: center;
   justify-content: space-around;
-  background-color: white;
+  background-color: black;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
 
     li{
@@ -74,7 +74,6 @@ export const LogoArea = styled.div`
 export const MenuArea = styled.div`
   display: flex;
   align-items: center;
- 
 `;
 
 export const AvatarWrapper = styled.div`
@@ -159,7 +158,6 @@ export const AvatarWrapper = styled.div`
 
         }
         
-     
         button {
           margin-top: 20px;
           padding: 0;
@@ -247,7 +245,6 @@ export const MenuWrapper = styled.div`
 `;
 
 export const AuthWrapper = styled.div`
-
 
   ul,
   .ant-menu,

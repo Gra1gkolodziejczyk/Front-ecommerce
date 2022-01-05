@@ -1,5 +1,6 @@
 import Cookies from "js-cookie"
 import fetch from 'isomorphic-unfetch';
+import { FastField } from "formik";
 
 // Ce helper te permettra de récupérer des données de l'API
 // tu peut l'utiliser notamment dans un getInitialProps 

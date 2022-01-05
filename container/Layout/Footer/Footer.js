@@ -1,10 +1,14 @@
-import React from 'react'
+import React from 'react';
 
 const Footer = () => {
     return (
-        <div>
-            
-        </div>
+        <FooterWrapper>
+            <FooterImageWrapper>
+                <FooterTextWrapper>
+                    
+                </FooterTextWrapper>
+            </FooterImageWrapper>
+        </FooterWrapper>
     )
 }
 
