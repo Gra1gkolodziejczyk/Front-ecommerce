@@ -10,6 +10,8 @@ import GetAPIData from '../helpers/get_api_data';
 // elle te sera d'un grand secours croit moi.
 
 export default function Home({ processedData, ctxQuery, locale, isLoggedIn }) {
+
+  
   return (
     <>
       <Head>
