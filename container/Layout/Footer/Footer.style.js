@@ -62,7 +62,7 @@ export const Logo = styled.img`
 
 export const TextOpacity = styled.p`
     font-size: 12px;
-    color: #CCCCCC;
+    color: #fff;
 `;
 
 export default FooterWrapper
