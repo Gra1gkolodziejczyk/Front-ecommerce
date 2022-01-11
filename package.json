@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@styled-system/theme-get": "^5.1.2",
+    "antd": "^4.18.3",
     "cors": "^2.8.5",
     "country-flag-icons": "^1.4.19",
     "dotenv": "^10.0.0",

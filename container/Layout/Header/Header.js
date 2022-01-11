@@ -78,4 +78,4 @@ const Header = ({ user, isLoggedIn }) => {
     )
 }
 
-export default Header
+export default withRouter(Header)
