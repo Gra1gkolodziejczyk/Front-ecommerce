@@ -20,7 +20,6 @@ export default function Home({ processedData, ctxQuery, locale, isLoggedIn }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>Ceci est la page home</h1>
-      {/* <Navbar /> */}
     </>
   )
 }
