@@ -1,6 +1,4 @@
 import styled from "styled-components";
-<<<<<<< HEAD
-=======
 
 const FooterWrapper = styled.div`
     width: 100%;
@@ -68,4 +66,3 @@ export const TextOpacity = styled.p`
 `;
 
 export default FooterWrapper
->>>>>>> b5e245b3180d8c8942fcf0563e906ed2fe374a70
