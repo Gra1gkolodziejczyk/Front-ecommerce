@@ -19,7 +19,6 @@ export default function Home({ processedData, ctxQuery, locale, isLoggedIn }) {
       </Head>
       <h1>Ceci est la page home</h1>
       {/* <Navbar /> */}
-        {/*<Footer /> */}
     </>
   )
 }

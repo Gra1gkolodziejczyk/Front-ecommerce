@@ -1,7 +1,7 @@
 import React from 'react';
-import { FooterWrapper, FooterTitleWrapper, Title, Text, Image, FooterMediumWrapper,
-    TextOpacity, FooterLowerWrapper, FooterLogoWrapper, Logo,
-    FooterTextOpacityWrapper, FooterContentWrapper} from './Footer.style';
+import FooterWrapper, { FooterTitleWrapper, Title, Text, Image, FooterMediumWrapper,
+    TextOpacity, FooterLowerWrapper, FooterLogoWrapper, Logo, FooterTextOpacityWrapper,
+    FooterContentWrapper } from './Footer.style';
 
 const Footer = () => {
     return (
