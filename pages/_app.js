@@ -2,7 +2,7 @@ import { DefaultSeo } from 'next-seo';
 import App from 'next/app';
 import LayoutPage from '../container/Layout/Layout';
 import AuthProvider from '../context/AuthProvider';
-import GlobalStyles from '../static/style/GlobalStyle.style';
+import GlobalStyles from '../public/style/GlobalStyle.style';
 
 // ne touche pas trop à ce fichier il est le centre névralgique de ton application c'est le app.js
 // en React
