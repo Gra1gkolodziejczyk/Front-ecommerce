@@ -1,10 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { FooterWrapper, FooterTextWrapper, Text} from './Footer.style';
 
 const Footer = () => {
     return (
-        <div>
-            
-        </div>
+        <FooterWrapper>
+           <FooterTextWrapper>
+               <Text>Hello World</Text>
+           </FooterTextWrapper>
+        </FooterWrapper>
     )
 }
 
