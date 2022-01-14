@@ -9,14 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@ant-design/icons": "^4.7.0",
     "@styled-system/theme-get": "^5.1.2",
-    "@zeit/next-css": "^0.0.6",
-    "@zeit/next-less": "^0.0.4",
-    "@zeit/next-sass": "^1.0.1",
-    "antd": "^4.17.3",
-    "antd-mobile": "^0.0.0",
-    "babel-plugin-import": "^1.13.3",
+    "antd": "^4.18.3",
     "cors": "^2.8.5",
     "country-flag-icons": "^1.4.19",
     "dotenv": "^10.0.0",
@@ -29,8 +23,6 @@
     "mobile-detect": "^1.4.5",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.34",
-    "next": "^12.0.7",
-    "next-compose-plugins": "^2.2.1",
     "next-cookies": "^2.0.3",
     "next-fonts": "^1.5.1",
     "next-image-loader": "^2.0.6",
@@ -48,8 +40,7 @@
     "redux": "^4.1.2",
     "sass": "^1.47.0",
     "styled-components": "^5.3.3",
-    "webpack": "^4.46.0",
-    "webpack-filter-warnings-plugin": "^1.2.1",
+    "webpack": "^5.64.4",
     "yup": "^0.32.11"
   },
   "devDependencies": {

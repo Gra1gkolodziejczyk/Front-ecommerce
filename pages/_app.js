@@ -1,13 +1,14 @@
 import { DefaultSeo } from 'next-seo';
 import App from 'next/app';
 import LayoutPage from '../container/Layout/Layout';
+import { withData } from '../helpers/restriction';
 import AuthProvider from '../context/AuthProvider';
-import GlobalStyles from '../public/style/GlobalStyle.style';
+import GlobalStyle from '../public/style/GlobalStyle.style';
 
 // ne touche pas trop à ce fichier il est le centre névralgique de ton application c'est le app.js
 // en React
 
-export default class MyApp extends App {
+class MyApp extends App {
   constructor(props) {
     super(props);
     this.state = {
@@ -22,7 +23,7 @@ export default class MyApp extends App {
     }
 
     const { query, pathname, asPath, locale } = ctx;
-    const { user, isLoggedIn, token } = ctx;
+    const { user, isLoggedIn, token } = withData(ctx);
     const tokenCookie = token;
 
     let isProtectedRoute = [
@@ -30,7 +31,7 @@ export default class MyApp extends App {
     ].includes(pathname);
 
     if (!isLoggedIn && isProtectedRoute && ctx.res) {
-      ctx.res.writeHead(302, {Location: `${process.env.LOCAL_FRONT_SERVER}/${locale}/login?next=${asPath}`});
+      ctx.res.writeHead(302, {Location: `${process.env.LOCAL_FRONT_SERVER}/login?next=${asPath}`});
       ctx.res.end();
     }
     return { pageProps, query, pathname, user, isLoggedIn, tokenCookie }
@@ -69,7 +70,7 @@ export default class MyApp extends App {
               cardType: "summary_large_image"
             }}
           />
-          <GlobalStyles />
+          <GlobalStyle />
           <Component 
             user={AuthUser}
             isLoggedIn={isLoggedIn}
@@ -82,4 +83,4 @@ export default class MyApp extends App {
 }
 
 
-// export default MyApp
+export default MyApp
