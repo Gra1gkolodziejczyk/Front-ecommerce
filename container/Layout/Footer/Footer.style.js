@@ -37,7 +37,7 @@ export const Image = styled.img`
 
 export const Text = styled.p`
     font-size: 16px;
-    color: #ffff;
+    color: #FFFF;
 `;
 
 export const FooterLowerWrapper = styled.div`
@@ -60,7 +60,12 @@ export const Logo = styled.img`
 
 export const TextOpacity = styled.p`
     font-size: 16px;
-    color: #fff;
+    color: #FFFF;
+`;
+
+export const TextSpan = styled.span`
+    font-size: 25px;
+    color: #FFFF;
 `;
 
 export default FooterWrapper

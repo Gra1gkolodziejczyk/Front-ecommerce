@@ -1,7 +1,7 @@
 import React from 'react';
 import FooterWrapper, { FooterTitleWrapper, Title, Text, Image, FooterMediumWrapper,
     TextOpacity, FooterLowerWrapper, FooterLogoWrapper, Logo, FooterTextOpacityWrapper,
-    FooterContentWrapper } from './Footer.style';
+    FooterContentWrapper, TextSpan } from './Footer.style';
 
 const Footer = () => {
     return (
@@ -33,14 +33,14 @@ const Footer = () => {
             <FooterLowerWrapper>
 
                 <FooterTextOpacityWrapper>
-                    <TextOpacity>©All Right reserved</TextOpacity>
+                    <TextOpacity><TextSpan>©</TextSpan>All Right reserved</TextOpacity>
                 </FooterTextOpacityWrapper>
 
                 <FooterLogoWrapper>
-                    <Logo src={"./static/images/social_instagram_3.png"}/>
-                    <Logo src={"./static/images/twitch_black_logo_icon_147063.svg"}/>
-                    <Logo src={""}/>
-                    <Logo src={""}/>
+                    <Logo src={"./static/images/Facebook.png"}/>
+                    <Logo src={"./static/images/Twitter.png"}/>
+                    <Logo src={"./static/images/Instagram.png"}/>
+                    <Logo src={"./static/images/Twitch.png"}/>
                 </FooterLogoWrapper>
 
             </FooterLowerWrapper>
