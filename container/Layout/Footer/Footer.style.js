@@ -58,6 +58,9 @@ export const Logo = styled.img`
     height: 50px;
 `;
 
+export const Link = styled.a`
+`;
+
 export const TextOpacity = styled.p`
     font-size: 16px;
     color: #FFFF;

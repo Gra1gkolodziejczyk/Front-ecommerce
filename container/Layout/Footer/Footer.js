@@ -1,7 +1,7 @@
 import React from 'react';
 import FooterWrapper, { FooterTitleWrapper, Title, Text, Image, FooterMediumWrapper,
     TextOpacity, FooterLowerWrapper, FooterLogoWrapper, Logo, FooterTextOpacityWrapper,
-    FooterContentWrapper, TextSpan } from './Footer.style';
+    FooterContentWrapper, TextSpan, Link } from './Footer.style';
 
 const Footer = () => {
     return (
@@ -14,17 +14,17 @@ const Footer = () => {
             <FooterMediumWrapper>
 
                 <FooterContentWrapper>
-                    <Image src={""}/>
+                    <Image src={"./static/images/Pin.png"}/>
                     <Text>102 cours Franklin Roosvelt 33000 Bordeaux</Text>
                 </FooterContentWrapper>
 
                 <FooterContentWrapper>
-                    <Image src={""}/>
+                    <Image src={"./static/images/Phone.png"}/>
                     <Text>+33.7.35.55.74.32</Text>
                 </FooterContentWrapper>
 
                 <FooterContentWrapper>
-                    <Image src={""}/>
+                    <Image src={"./static/images/User.png"}/>
                     <Text>Lorem autem uptimus prime de el famoso dif</Text>
                 </FooterContentWrapper>
 
@@ -37,10 +37,18 @@ const Footer = () => {
                 </FooterTextOpacityWrapper>
 
                 <FooterLogoWrapper>
-                    <Logo src={"./static/images/Facebook.png"}/>
-                    <Logo src={"./static/images/Twitter.png"}/>
-                    <Logo src={"./static/images/Instagram.png"}/>
-                    <Logo src={"./static/images/Twitch.png"}/>
+                    <Link href={"#"}>
+                        <Logo src={"./static/images/Facebook.png"}/>
+                    </Link>
+                    <Link href={"#"}>
+                        <Logo src={"./static/images/Twitter.png"}/>
+                    </Link>
+                    <Link href={"#"}>
+                        <Logo src={"./static/images/Instagram.png"}/>
+                    </Link>
+                    <Link href={"#"}>
+                        <Logo src={"./static/images/Twitch.png"}/>
+                    </Link>
                 </FooterLogoWrapper>
 
             </FooterLowerWrapper>
