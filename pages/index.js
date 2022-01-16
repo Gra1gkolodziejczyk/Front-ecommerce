@@ -9,9 +9,7 @@ import GetAPIData from '../helpers/get_api_data';
 // renseigne toi bien sur les différentes balises que propose NextJS sur la doc
 // elle te sera d'un grand secours croit moi.
 
-const Home = (
-
-) => {
+const Home = () => {
 
   
   return (
