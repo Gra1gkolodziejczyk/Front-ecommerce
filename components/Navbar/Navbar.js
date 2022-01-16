@@ -20,9 +20,7 @@ export const Navbar = ({
     profileMenu,
     isLogin,
     headerType,
-    searchComponent,
     location,
-    searchVisibility
 }) => {
 
     const addAllClasses = ['navbar'];
@@ -38,10 +36,9 @@ export const Navbar = ({
 
     return (
         <NavbarWrapper className={addAllClasses.join(" ")}>
-            {logo || searchVisibility ? (
+            {logo ? (
                 <LogoArea>
                     {logo}
-                    {searchComponent}
                 </LogoArea>
             ) : null}
             <MenuArea>

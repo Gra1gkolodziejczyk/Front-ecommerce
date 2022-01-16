@@ -34,20 +34,11 @@
     "files": [
       "static/chunks/container_Layout_Header_Header_js.js"
     ]
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> b7a41252cdf8c6269c53f62005cc542adcc38fd0
   },
   "../node_modules/next/dist/client/index.js -> ../pages/_error": {
     "id": "../node_modules/next/dist/client/index.js -> ../pages/_error",
     "files": [
       "static/chunks/node_modules_next_dist_pages__error_js.js"
     ]
-<<<<<<< HEAD
->>>>>>> cea8a323ac5b041c3b90bf668ba3e8f5a1b4b9d5
-=======
->>>>>>> b7a41252cdf8c6269c53f62005cc542adcc38fd0
   }
 }

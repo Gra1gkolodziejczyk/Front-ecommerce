@@ -41,7 +41,7 @@ const ProfileMenu = ({ user }) => {
                         {/* Ca ce sont les différents liens quand le user est connecté 
                         il peut voir son avatar et cliquer dessus 
                         et fera apparaitre ce menu après tu le réarrange comme tu le souhaite*/}
-                        Le nom du lien
+                        DashBoard
                     </ActiveLink>
                 </Menu.Item>
                 <Menu.Item>

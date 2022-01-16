@@ -27,7 +27,7 @@ const LayoutWrapper = ({ children, user, isLoggedIn }) => {
                         <Header user={user} isLoggedIn={isLoggedIn} />
                         <Content>{children}</Content>
                         {router.pathname === '/' ||
-                        router.pathname === '/dashboard' 
+                        router.pathname === '/dashboard'
                         
                     ? (<Footer />)
                     : null}

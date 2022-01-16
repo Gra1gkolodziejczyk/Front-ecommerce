@@ -76,6 +76,7 @@ const Header = ({ user, isLoggedIn }) => {
                 </MobileNavbar>
             </Sticky>
         </HeaderWrapper>
+        
     )
 }
 

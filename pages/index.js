@@ -1,4 +1,5 @@
-import Head from 'next/head'
+import Head from 'next/head';
+// import 'antd/dist/antd.min.css';
 import { withData } from '../helpers/restriction';
 import { Navbar } from '../components/Navbar/Navbar';
 import GetAPIData from '../helpers/get_api_data';
