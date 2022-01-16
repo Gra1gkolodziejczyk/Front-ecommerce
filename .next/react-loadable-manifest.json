@@ -34,5 +34,14 @@
     "files": [
       "static/chunks/container_Layout_Header_Header_js.js"
     ]
+<<<<<<< HEAD
+=======
+  },
+  "../node_modules/next/dist/client/index.js -> ../pages/_error": {
+    "id": "./node_modules/next/dist/pages/_error.js",
+    "files": [
+      "static/chunks/node_modules_next_dist_pages__error_js.js"
+    ]
+>>>>>>> cea8a323ac5b041c3b90bf668ba3e8f5a1b4b9d5
   }
 }
