@@ -1,16 +1,16 @@
 import React from 'react';
-import FooterWrapper, { FooterTitleWrapper, Title, Text, FooterMediumWrapper, TextOpacity,
-      FooterLowerWrapper, FooterLogoWrapper, FooterTextOpacityWrapper,
-    FooterContentWrapper, TextSpan, Link } from './Footer.style';
-import Image from 'next/image';
-import PhonePic from '../../../public/images/Phone.png';
+import FooterWrapper, { FooterTitleWrapper, Title, Text, Image, FooterMediumWrapper,
+    TextOpacity, FooterLowerWrapper, FooterLogoWrapper, Logo, FooterTextOpacityWrapper,
+    FooterContentWrapper } from './Footer.style';
+
 import PinPic from '../../../public/images/Pin.png';
+import PhonePic from '../../../public/images/Phone.png';
 import UserPic from '../../../public/images/User.png';
+import InstagramPic from '../../../public/images/Instagram.png';
 import FacebookPic from '../../../public/images/Facebook.png';
 import TwitterPic from '../../../public/images/Twitter.png';
 import TwitchPic from '../../../public/images/Twitch.png';
 import YoutubePic from '../../../public/images/Youtube.png';
-import InstagramPic from '../../../public/images/Instagram.png';
 
 const Footer = () => {
     return (

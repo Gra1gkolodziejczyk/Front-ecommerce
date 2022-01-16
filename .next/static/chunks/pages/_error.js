@@ -8,6 +8,11 @@
  */
 (self["webpackChunk_N_E"] = self["webpackChunk_N_E"] || []).push([["pages/_error"],{
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> b7a41252cdf8c6269c53f62005cc542adcc38fd0
 /***/ "./node_modules/next/dist/pages/_error.js":
 /*!************************************************!*\
   !*** ./node_modules/next/dist/pages/_error.js ***!
@@ -19,6 +24,10 @@ eval("/* module decorator */ module = __webpack_require__.nmd(module);\n\n\nvar 
 
 /***/ }),
 
+<<<<<<< HEAD
+>>>>>>> cea8a323ac5b041c3b90bf668ba3e8f5a1b4b9d5
+=======
+>>>>>>> b7a41252cdf8c6269c53f62005cc542adcc38fd0
 /***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_error&absolutePagePath=private-next-pages%2F_error!":
 /*!***********************************************************************************************************************************************!*\
   !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_error&absolutePagePath=private-next-pages%2F_error! ***!
