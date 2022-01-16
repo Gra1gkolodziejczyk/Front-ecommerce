@@ -10,6 +10,7 @@ export const FooterTitleWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 75px;
 `;
 
 export const Title = styled.h2`
@@ -20,7 +21,7 @@ export const FooterMediumWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 50px 0 50px;
+    margin: 0 50px 75px 50px;
 `;
 
 export const FooterContentWrapper = styled.div`
@@ -30,14 +31,9 @@ export const FooterContentWrapper = styled.div`
     flex-direction: column;
 `;
 
-export const Image = styled.img`
-    width: 100px;
-    height: 100px;
-`;
-
 export const Text = styled.p`
     font-size: 16px;
-    color: #ffff;
+    color: #FFFF;
 `;
 
 export const FooterLowerWrapper = styled.div`
@@ -53,14 +49,17 @@ export const FooterLogoWrapper = styled.div`
       margin: 0 50px 0 0;
 `;
 
-export const Logo = styled.img`
-    width: 50px;
-    height: 50px;
+export const Link = styled.a`
 `;
 
 export const TextOpacity = styled.p`
     font-size: 16px;
-    color: #fff;
+    color: #FFFF;
+`;
+
+export const TextSpan = styled.span`
+    font-size: 25px;
+    color: #FFFF;
 `;
 
 export default FooterWrapper

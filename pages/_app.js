@@ -3,7 +3,11 @@ import App from 'next/app';
 import LayoutPage from '../container/Layout/Layout';
 import { withData } from '../helpers/restriction';
 import AuthProvider from '../context/AuthProvider';
+<<<<<<< HEAD
 import GlobalStyle from '../public/style/GlobalStyle.style';
+=======
+import GlobalStyles from '../public/style/GlobalStyle.style';
+>>>>>>> cea8a323ac5b041c3b90bf668ba3e8f5a1b4b9d5
 
 // ne touche pas trop à ce fichier il est le centre névralgique de ton application c'est le app.js
 // en React
