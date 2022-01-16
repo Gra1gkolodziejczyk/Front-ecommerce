@@ -1,42 +1,42 @@
 {
   "../container/Layout/Header/Header.js -> ./AuthMenu": {
-    "id": "./container/Layout/Header/AuthMenu.js",
+    "id": "../container/Layout/Header/Header.js -> ./AuthMenu",
     "files": [
       "static/chunks/container_Layout_Header_AuthMenu_js.js"
     ]
   },
   "../container/Layout/Header/Header.js -> ./MainMenu": {
-    "id": "./container/Layout/Header/MainMenu.js",
+    "id": "../container/Layout/Header/Header.js -> ./MainMenu",
     "files": [
       "static/chunks/container_Layout_Header_MainMenu_js.js"
     ]
   },
   "../container/Layout/Header/Header.js -> ./MobileMenu": {
-    "id": "./container/Layout/Header/MobileMenu.js",
+    "id": "../container/Layout/Header/Header.js -> ./MobileMenu",
     "files": [
       "static/chunks/container_Layout_Header_MobileMenu_js.js"
     ]
   },
   "../container/Layout/Header/Header.js -> ./ProfileMenu": {
-    "id": "./container/Layout/Header/ProfileMenu.js",
+    "id": "../container/Layout/Header/Header.js -> ./ProfileMenu",
     "files": [
       "static/chunks/container_Layout_Header_ProfileMenu_js.js"
     ]
   },
   "../container/Layout/Layout.js -> ./Footer/Footer": {
-    "id": "./container/Layout/Footer/Footer.js",
+    "id": "../container/Layout/Layout.js -> ./Footer/Footer",
     "files": [
       "static/chunks/container_Layout_Footer_Footer_js.js"
     ]
   },
   "../container/Layout/Layout.js -> ./Header/Header": {
-    "id": "./container/Layout/Header/Header.js",
+    "id": "../container/Layout/Layout.js -> ./Header/Header",
     "files": [
       "static/chunks/container_Layout_Header_Header_js.js"
     ]
   },
   "../node_modules/next/dist/client/index.js -> ../pages/_error": {
-    "id": "./node_modules/next/dist/pages/_error.js",
+    "id": "../node_modules/next/dist/client/index.js -> ../pages/_error",
     "files": [
       "static/chunks/node_modules_next_dist_pages__error_js.js"
     ]

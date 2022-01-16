@@ -41,9 +41,9 @@ const Footer = () => {
                 </FooterTextOpacityWrapper>
 
                 <FooterLogoWrapper>
-                    <Logo src={InstaPic} width={100} height={100}/>
-                    <Logo src={TwitchPic} width={100} height={100}/>
-                    <Logo src={FaceBookPic} width={100} height={100}/>
+                    <Image src={InstaPic} width={100} height={100}/>
+                    <Image src={TwitchPic} width={100} height={100}/>
+                    <Image src={FaceBookPic} width={100} height={100}/>
                     <Logo src={""}/>
                 </FooterLogoWrapper>
 

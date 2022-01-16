@@ -8,6 +8,7 @@ import Navbar from '../../../components/Navbar/Navbar';
 import HeaderWrapper, { LogoArea, MobileNavbar } from './Header.style';
 import dynamic from 'next/dynamic';
 import useTranslation from '../../../hooks/useTranslation';
+import LogoPic from '../../../public/images/Logo.jpg';
 
 const AuthMenu = dynamic(() => import('./AuthMenu'));
 const MainMenu = dynamic(() => import('./MainMenu'));
@@ -45,7 +46,7 @@ const Header = ({ user, isLoggedIn }) => {
                     logo={
                         <Link href="/" prefetch={false} locale={locale}>
                             <a>
-                                {/* Tu mettra le logo ici avec la balise image de next */}
+                                <Image src={LogoPic} width={100} height={100} />
                             </a>
                         </Link>
                     }
