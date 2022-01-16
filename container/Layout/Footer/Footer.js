@@ -1,7 +1,5 @@
 import React from 'react';
-import FooterWrapper, { FooterTitleWrapper, Title, Text, FooterMediumWrapper, TextOpacity,
-      FooterLowerWrapper, FooterLogoWrapper, FooterTextOpacityWrapper,
-    FooterContentWrapper, TextSpan, Link } from './Footer.style';
+import FooterWrapper, { FooterTitleWrapper, Title, Text, FooterMediumWrapper, TextOpacity,FooterLowerWrapper, FooterLogoWrapper, FooterTextOpacityWrapper,FooterContentWrapper, TextSpan, Link } from './Footer.style';
 import Image from 'next/image';
 import PhonePic from '../../../public/images/Phone.png';
 import PinPic from '../../../public/images/Pin.png';
