@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Login = () => {
+function Login() {
     return (
         <>
           <h1>Ceci est la page login</h1>  

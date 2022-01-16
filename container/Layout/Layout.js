@@ -1,6 +1,6 @@
 import { Layout } from "antd"
 import dynamic from 'next/dynamic';
-import { useRouter } from "next/router";
+import { useRouter, withRouter } from "next/router";
 import LayoutProvider from "../../context/LayoutProvider";
 
 const Footer = dynamic(() => import('./Footer/Footer'));
@@ -43,4 +43,4 @@ const LayoutWrapper = ({ children, user, isLoggedIn }) => {
     )
 }
 
-export default LayoutWrapper
+export default withRouter(LayoutWrapper)
