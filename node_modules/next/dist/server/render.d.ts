@@ -42,6 +42,7 @@ export declare type RenderOptsPartial = {
     resolvedAsPath?: string;
     serverComponentManifest?: any;
     renderServerComponentData?: boolean;
+    serverComponentProps?: any;
     distDir?: string;
     locale?: string;
     locales?: string[];

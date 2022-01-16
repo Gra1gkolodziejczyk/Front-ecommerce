@@ -7,10 +7,10 @@ exports.normalizeRouteRegex = normalizeRouteRegex;
 exports.modifyRouteRegex = modifyRouteRegex;
 exports.default = loadCustomRoutes;
 exports.allowedStatusCodes = void 0;
-var _chalk = _interopRequireDefault(require("chalk"));
+var _chalk = _interopRequireDefault(require("next/dist/compiled/chalk"));
 var _url = require("url");
 var pathToRegexp = _interopRequireWildcard(require("next/dist/compiled/path-to-regexp"));
-var _escapeStringRegexp = _interopRequireDefault(require("next/dist/compiled/escape-string-regexp"));
+var _escapeRegexp = require("../shared/lib/escape-regexp");
 var _constants = require("../shared/lib/constants");
 var _isError = _interopRequireDefault(require("./is-error"));
 function _interopRequireDefault(obj) {
@@ -375,7 +375,7 @@ function processRoutes(routes, config, type) {
                     });
                 });
             }
-            r.source = `/:nextInternalLocale(${config.i18n.locales.map((locale)=>(0, _escapeStringRegexp).default(locale)
+            r.source = `/:nextInternalLocale(${config.i18n.locales.map((locale)=>(0, _escapeRegexp).escapeStringRegexp(locale)
             ).join('|')})${r.source === '/' && !config.trailingSlash ? '' : r.source}`;
             if (r.destination && ((ref1 = r.destination) === null || ref1 === void 0 ? void 0 : ref1.startsWith('/'))) {
                 r.destination = `/:nextInternalLocale${r.destination === '/' && !config.trailingSlash ? '' : r.destination}`;

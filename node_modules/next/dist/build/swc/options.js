@@ -5,8 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.getJestSWCOptions = getJestSWCOptions;
 exports.getLoaderSWCOptions = getLoaderSWCOptions;
 const nextDistPath = /(next[\\/]dist[\\/]shared[\\/]lib)|(next[\\/]dist[\\/]client)|(next[\\/]dist[\\/]pages)/;
-const regeneratorRuntimePath = require.resolve('regenerator-runtime');
-function getBaseSWCOptions({ filename , development , hasReactRefresh , globalWindow , nextConfig , resolvedBaseUrl , jsConfig ,  }) {
+const regeneratorRuntimePath = require.resolve('next/dist/compiled/regenerator-runtime');
+function getBaseSWCOptions({ filename , jest , development , hasReactRefresh , globalWindow , nextConfig , resolvedBaseUrl , jsConfig ,  }) {
     var ref, ref1, ref2, ref3, ref4, ref5;
     const isTSFile = filename.endsWith('.ts');
     const isTypeScript = isTSFile || filename.endsWith('.tsx');
@@ -40,7 +40,7 @@ function getBaseSWCOptions({ filename , development , hasReactRefresh , globalWi
                 },
                 optimizer: {
                     simplify: false,
-                    globals: {
+                    globals: jest ? null : {
                         typeofs: {
                             window: globalWindow ? 'object' : 'undefined'
                         },
@@ -64,6 +64,7 @@ function getBaseSWCOptions({ filename , development , hasReactRefresh , globalWi
 function getJestSWCOptions({ isServer , filename , esm , nextConfig , jsConfig ,  }) {
     let baseOptions = getBaseSWCOptions({
         filename,
+        jest: true,
         development: false,
         hasReactRefresh: false,
         globalWindow: !isServer,
@@ -103,6 +104,7 @@ function getLoaderSWCOptions({ filename , development , isServer , pagesDir , is
             disableNextSsg: true,
             disablePageConfig: true,
             isDevelopment: development,
+            isServer,
             pagesDir,
             isPageFile,
             env: {
@@ -126,6 +128,7 @@ function getLoaderSWCOptions({ filename , development , isServer , pagesDir , is
             },
             disableNextSsg: !isPageFile,
             isDevelopment: development,
+            isServer,
             pagesDir,
             isPageFile
         };

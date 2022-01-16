@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.trackWebVitalMetric = trackWebVitalMetric;
-exports.useExperimentalWebVitalsReport = useExperimentalWebVitalsReport;
+exports.useWebVitalsReport = useWebVitalsReport;
 exports.webVitalsCallbacks = void 0;
 var _react = require("react");
 const webVitalsCallbacks = new Set();
@@ -14,7 +14,7 @@ function trackWebVitalMetric(metric) {
     webVitalsCallbacks.forEach((callback)=>callback(metric)
     );
 }
-function useExperimentalWebVitalsReport(callback) {
+function useWebVitalsReport(callback) {
     const metricIndexRef = (0, _react).useRef(0);
     (0, _react).useEffect(()=>{
         // Flush calculated metrics

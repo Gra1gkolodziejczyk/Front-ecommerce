@@ -35,7 +35,7 @@ export default class DevServer extends Server {
     };
     private getStaticPathsWorker;
     constructor(options: Options);
-    protected readBuildId(): string;
+    protected getBuildId(): string;
     addExportPathMapRoutes(): Promise<void>;
     startWatcher(): Promise<void>;
     stopWatcher(): Promise<void>;
@@ -55,7 +55,9 @@ export default class DevServer extends Server {
     protected getCustomRoutes(): CustomRoutes;
     private _devCachedPreviewProps;
     protected getPreviewProps(): __ApiPreviewProps;
+    protected getPagesManifest(): undefined;
     protected getMiddleware(): never[];
+    protected getMiddlewareManifest(): undefined;
     protected hasMiddleware(pathname: string, isSSR?: boolean): Promise<boolean>;
     protected ensureMiddleware(pathname: string, isSSR?: boolean): Promise<any>;
     generateRoutes(): {

@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.runLintCheck = runLintCheck;
 var _fs = require("fs");
-var _chalk = _interopRequireDefault(require("chalk"));
+var _chalk = _interopRequireDefault(require("next/dist/compiled/chalk"));
 var _path = _interopRequireDefault(require("path"));
 var _findUp = _interopRequireDefault(require("next/dist/compiled/find-up"));
 var _semver = _interopRequireDefault(require("next/dist/compiled/semver"));
@@ -18,7 +18,7 @@ var _installDependencies = require("../install-dependencies");
 var _hasNecessaryDependencies = require("../has-necessary-dependencies");
 var _isYarn = require("../is-yarn");
 var Log = _interopRequireWildcard(require("../../build/output/log"));
-var _isError = _interopRequireDefault(require("../is-error"));
+var _isError = _interopRequireWildcard(require("../is-error"));
 function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
         default: obj
@@ -179,7 +179,7 @@ async function lint(baseDir, lintDirs, eslintrcFile, pkgJsonPath, lintDuringBuil
             Log.error(`ESLint: ${(0, _isError).default(err) && err.message ? err.message.replace(/\n/g, ' ') : err}`);
             return null;
         } else {
-            throw new Error(err + '');
+            throw (0, _isError).getProperError(err);
         }
     }
 }

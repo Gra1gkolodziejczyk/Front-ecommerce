@@ -6,13 +6,8 @@ exports.matchHas = matchHas;
 exports.compileNonPath = compileNonPath;
 exports.prepareDestination = prepareDestination;
 var _pathToRegexp = require("next/dist/compiled/path-to-regexp");
-var _escapeStringRegexp = _interopRequireDefault(require("next/dist/compiled/escape-string-regexp"));
+var _escapeRegexp = require("../../escape-regexp");
 var _parseUrl = require("./parse-url");
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {
-        default: obj
-    };
-}
 function matchHas(req, has, query) {
     const params = {
     };
@@ -194,7 +189,7 @@ function prepareDestination(args) {
     return newParamName;
 }
 function escapeSegment(str, segmentName) {
-    return str.replace(new RegExp(`:${(0, _escapeStringRegexp).default(segmentName)}`, 'g'), `__ESC_COLON_${segmentName}`);
+    return str.replace(new RegExp(`:${(0, _escapeRegexp).escapeStringRegexp(segmentName)}`, 'g'), `__ESC_COLON_${segmentName}`);
 }
 function unescapeSegments(str) {
     return str.replace(/__ESC_COLON_/gi, ':');

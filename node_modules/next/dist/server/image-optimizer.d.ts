@@ -2,7 +2,7 @@
 import { IncomingMessage, ServerResponse } from 'http';
 import { UrlWithParsedQuery } from 'url';
 import { NextConfig } from './config-shared';
-import Server from './next-server';
+import type Server from './base-server';
 export declare function imageOptimizer(server: Server, req: IncomingMessage, res: ServerResponse, parsedUrl: UrlWithParsedQuery, nextConfig: NextConfig, distDir: string, isDev?: boolean): Promise<{
     finished: boolean;
 }>;

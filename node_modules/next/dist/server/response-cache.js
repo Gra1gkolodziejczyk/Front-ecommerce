@@ -71,7 +71,13 @@ class ResponseCache {
                     } : cacheEntry.value, cacheEntry.revalidate);
                 }
             } catch (err) {
-                rejecter(err);
+                // while revalidating in the background we can't reject as
+                // we already resolved the cache entry so log the error here
+                if (resolved) {
+                    console.error(err);
+                } else {
+                    rejecter(err);
+                }
             } finally{
                 if (key) {
                     this.pendingResponses.delete(key);

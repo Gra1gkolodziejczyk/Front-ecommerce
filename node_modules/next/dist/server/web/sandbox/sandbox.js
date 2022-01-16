@@ -13,6 +13,18 @@ async function run(params) {
     for (const paramPath of params.paths){
         runInContext(paramPath);
     }
+    const subreq = params.request.headers[`x-middleware-subrequest`];
+    const subrequests = typeof subreq === 'string' ? subreq.split(':') : [];
+    if (subrequests.includes(params.name)) {
+        return {
+            waitUntil: Promise.resolve(),
+            response: new context.Response(null, {
+                headers: {
+                    'x-middleware-next': '1'
+                }
+            })
+        };
+    }
     return context._ENTRIES[`middleware_${params.name}`].default({
         request: params.request
     });

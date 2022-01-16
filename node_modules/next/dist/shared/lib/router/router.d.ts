@@ -28,6 +28,7 @@ interface NextHistoryState {
     options: TransitionOptions;
 }
 interface PreflightData {
+    cache?: string | null;
     redirect?: string | null;
     refresh?: boolean;
     rewrite?: string | null;
