@@ -2,28 +2,29 @@ import { useRouter, withRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import useTranslation from '../../../hooks/useTranslation';
+import BurgerMenu, { BurgerMenuItem, TopSpan, MidSpan, BotSpan} from './MainMenu.style';
 
 const MainMenu = ({ className, isLoggedIn }) => {
-
     const { t } = useTranslation();
     const router = useRouter();
     const { locale, query } = router;
-    const [visible, setVisible] = useState(false);
+    const [language, setLanguage] = useState(null);
+    const [visible, setVisible] = useState(false)
 
     return (
-        <>
-            <div>
-                <span></span>   
-                <span></span>   
-                <span></span>
-            </div>
-            { visible ?  
-                <div>
+        <BurgerMenu>
+            <BurgerMenuItem onClick={setVisible}>
+                <TopSpan></TopSpan>
+                <MidSpan></MidSpan>
+                <BotSpan></BotSpan>
+            </BurgerMenuItem>
+            { visible ?
+                <>
 
-                </div> 
-            : null}  
-        </>
+                </>
+            : null }
+        </BurgerMenu>
     )
 }
 
-export default withRouter(MainMenu)
+export default withRouter(MainMenu);

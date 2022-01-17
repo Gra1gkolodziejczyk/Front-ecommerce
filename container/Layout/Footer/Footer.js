@@ -1,9 +1,19 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import Image from 'next/image';
 import FooterWrapper, { FooterTitleWrapper, Title, Text, FooterMediumWrapper,
     TextOpacity, FooterLowerWrapper, FooterLogoWrapper, FooterTextOpacityWrapper,
     FooterContentWrapper, TextSpan } from './Footer.style';
+=======
+
+import FooterWrapper, { FooterTitleWrapper, Title, Text, FooterMediumWrapper,
+    TextOpacity, FooterLowerWrapper, FooterLogoWrapper, FooterTextOpacityWrapper,
+    FooterContentWrapper, TextSpan } from './Footer.style';
+
+import Link from 'next/link';
+import Image from 'next/image';
+>>>>>>> f9d76d4fab88a8b768676f3702a629229c599e84
 import PinPic from '../../../public/images/Pin.png';
 import PhonePic from '../../../public/images/Phone.png';
 import UserPic from '../../../public/images/User.png';
